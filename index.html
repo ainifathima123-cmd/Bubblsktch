@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bubble Sketch</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #ffeef5;
+    color: #444;
+}
+
+/* HEADER */
+header {
+    background: #d8f3dc;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* SECTION STYLE */
+section {
+    padding: 30px;
+    margin: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* BUTTONS */
+button {
+    background-color: #ffcad4;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #d8f3dc;
+}
+
+/* GRID FOR IMAGES */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.grid img {
+    width: 100%;
+    border-radius: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+Bubble Sketch 🎀
+</header>
+
+<!-- ABOUT -->
+<section>
+<h2>A Little About Us</h2>
+<p>
+Bubble Sketch was created to make finding drawing inspiration simple and enjoyable. 
+This K-pop-themed web brings together a carefully selected collection of Pinterest images 
+in one place, so you can quickly find something to draw without feeling overwhelmed. 
+All images are sourced from Pinterest and curated to match a soft, creative aesthetic.
+</p>
+</section>
+
+<!-- HOW TO USE -->
+<section>
+<h2>How to Use Bubble Sketch</h2>
+<p>
+Using Bubble Sketch is simple. Explore the curated collection of drawing ideas and click on anything 
+that sparks your creativity. Feeling stuck? Try a random idea or take on a mini challenge to push your skills. 
+This space is designed to be relaxed and inspiring, so take your time and enjoy creating.
+</p>
+</section>
+
+<!-- MUSIC -->
+<section>
+<h2>Pick a vibe 🎧</h2>
+
+<p>Midnight Fiction - ILLIT</p>
+<iframe width="300" height="170"
+src="https://www.youtube.com/embed/"
+allowfullscreen></iframe>
+
+<p>NewJeans - NewJeans</p>
+<iframe width="300" height="170"
+src="https://www.youtube.com/embed/"
+allowfullscreen></iframe>
+
+<p>Deja Vu - RESCENE</p>
+<iframe width="300" height="170"
+src="https://www.youtube.com/embed/"
+allowfullscreen></iframe>
+
+<p>Imaginary Friend - ITZY</p>
+<iframe width="300" height="170"
+src="https://www.youtube.com/embed/"
+allowfullscreen></iframe>
+
+<p style="font-size:12px;">*Replace links with actual YouTube embed links*</p>
+
+</section>
+
+<!-- DRAWING IDEAS -->
+<section>
+<h2>Drawing Ideas ✏️</h2>
+
+<div class="grid">
+<img src="https://via.placeholder.com/150">
+<img src="https://via.placeholder.com/150">
+<img src="https://via.placeholder.com/150">
+<img src="https://via.placeholder.com/150">
+</div>
+
+<p style="font-size:12px;">
+All images sourced from Pinterest for inspiration purposes.
+</p>
+
+</section>
+
+<!-- RANDOM IDEA BUTTON -->
+<section>
+<h2>Feeling stuck?</h2>
+
+<p id="idea">Click below for a random idea</p>
+
+<button onclick="newIdea()">Random Idea 🎲</button>
+
+</section>
+
+<script>
+function newIdea() {
+    const ideas = [
+        "Draw a cute bunny character 🐰",
+        "Sketch a dreamy outfit 🌸",
+        "Draw your favorite idol in your style ✨",
+        "Draw a cute doodle 🌙",
+        "Draw a mini comic 💭"
+    ];
+
+    let random = ideas[Math.floor(Math.random() * ideas.length)];
+    document.getElementById("idea").innerText = random;
+}
+</script>
+
+</body>
+</html>
